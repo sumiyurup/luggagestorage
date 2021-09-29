@@ -1,0 +1,6 @@
+theme: jekyll-theme-minimal
+title: "The Ultimate Luggage Storage Guide"
+description: []
+permalink: /:categories/:title
+google_analytics: G-MSYS548V2X
+markdown: kramdown

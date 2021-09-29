@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    {% seo %} {% include head-custom.html %}
+    <style>
+      .image-clip {
+        width: 250px;
+        height: 175px;
+        overflow: hidden;
+      }
+      ul li {
+        list-style-type: disc;
+      }
+    </style>
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    <nav>
+      <div class="wrap-nav">
+        <div id="logo-navbar">Luggage Storage Guide</div>
+
+        <label for="drop" class="toggle"
+          ><i class="fa fa-bars icon-decoration"></i
+        ></label>
+        <input type="checkbox" id="drop" />
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li>
+            <!-- First Tier Drop Down -->
+            <label for="drop-1" class="toggle">Top Cities +</label>
+            <a href="#">Top Cities +</a>
+            <input type="checkbox" id="drop-1" />
+            <ul>
+              <li><a href="/australia/melbourne">Melbourne</a></li>
+              <li><a href="/australia/sydney">Sydney</a></li>
+              <li><a href="/australia/brisbane">Brisbane</a></li>
+              <li><a href="/newzealand/auckland">Auckland</a></li>
+            </ul>
+          </li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="pt-5 pb-3" style="margin-top: 100px">
+      <h1 style="text-align: center; color: #353535">
+        {{ page.title | default: site.title | default:
+        site.github.repository_name }}
+      </h1>
+    </header>
+    <main class="flex-shrink-0 pb-4">
+      <div class="container">{{content}}</div>
+    </main>
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted">
+          <a class="p-2 text-dark" style="text-decoration: none" href="/"
+            >Home</a
+          >
+          <a class="p-2 text-dark" style="text-decoration: none" href="/contact"
+            >Contact</a
+          >
+          <a class="p-2 text-dark" style="text-decoration: none" href="/terms"
+            >Terms</a
+          >
+          <a class="p-2 text-dark" style="text-decoration: none" href="/privacy"
+            >Privacy</a
+          >
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
